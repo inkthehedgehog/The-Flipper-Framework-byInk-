@@ -204,6 +204,7 @@ public class S_SubAction_Boost : S_Action_Base, ISubAction
 
 		_Effects.TriggerBlurBurstScreen();
 		_Sounds.BoostSound();
+		_CoreValues._MusicVersionHandler?.SwitchToBoostVersion();
 
 		//Make the boost effects fade in rather than appear instantly.
 		StopCoroutine(SetBoostEffectVisibility(0, 0, 0));
@@ -298,6 +299,7 @@ public class S_SubAction_Boost : S_Action_Base, ISubAction
 		StopCoroutine(SetBoostEffectVisibility(0, 0, 0));
 		StartCoroutine(SetBoostEffectVisibility(1, 0.1f, 30));
 		_Sounds.EndBoostSound();
+		_CoreValues._MusicVersionHandler?.SwitchToNormalVersion();
 	}
 
 	//Lerps towards boost speed rather than change speed instantly. maxFrames is how many frames it will take to reach this from a speed less than the startBoostSpees stat.

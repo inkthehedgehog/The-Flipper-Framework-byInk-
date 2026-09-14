@@ -8,6 +8,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class S_PlayerCoreValues : S_Player_Base
 {
 	[NonSerialized] public AudioSource _Music;
+	[NonSerialized] public S_Control_MusicVersionHandler _MusicVersionHandler;
 
 	private S_PlayerScore _Score;
 	private S_Control_EffectsPlayer _Effects;

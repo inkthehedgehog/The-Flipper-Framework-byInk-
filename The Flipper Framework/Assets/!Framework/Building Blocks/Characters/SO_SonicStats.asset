@@ -34,7 +34,7 @@ MonoBehaviour:
     gainEnergyFromRings: 1
     gainEnergyOverTime: 1
     energyGainPerRing: 1.2
-    energyGainPerSecond: 2.5
+    energyGainPerSecond: 121.37
     startMaxEnergy: 100
     energyOnPlayerStart: {x: 0.7, y: 0.5}
   StartAccelerationStats:
@@ -1780,6 +1780,7 @@ MonoBehaviour:
     doubleJumpDuration: {x: 0.04, y: 0.14}
     speedLossOnDoubleJump: 0.98
   QuickstepStats:
+    minimumSpeedForQuickstep: 10
     stepDuration: 7
     stepDistance: 10
     airStepDuration: 10
@@ -1789,6 +1790,7 @@ MonoBehaviour:
       m_Bits: 8201
     cooldown: {x: 0.025, y: 0.2}
   StartQuickstepStats:
+    minimumSpeedForQuickstep: 10
     stepDuration: 55
     stepDistance: 8
     airStepDuration: 48
@@ -3083,6 +3085,7 @@ MonoBehaviour:
     upreelSpeedKeptAfter: 0.3
     minimumSpeedCarried: 30
   WallActionsStats:
+    canOnlyEnterFromQuickstep: 0
     wallCheckDistance: {x: 8, y: 2}
     minHeight: 5
     WallLayerMask:
@@ -3094,6 +3097,7 @@ MonoBehaviour:
     jumpFromClimbingModifiers: {x: 0.8, y: 1.3}
     jumpFromRunningModifiers: {x: 1.2, y: 1.6}
   StartWallRunningStats:
+    canOnlyEnterFromQuickstep: 0
     wallCheckDistance: {x: 10, y: 6}
     minHeight: 5
     WallLayerMask:

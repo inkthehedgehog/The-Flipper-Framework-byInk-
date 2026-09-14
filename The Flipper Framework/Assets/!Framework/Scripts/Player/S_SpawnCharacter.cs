@@ -31,6 +31,7 @@ public class S_SpawnCharacter : S_Vis_Base
 	public CinemachineBrain _CameraBrain;
 	public S_O_StageInfo _StageInfo;
 	public AudioSource _MusicPlayer;
+	public S_Control_MusicVersionHandler _MusicVersionHandler;
 	public GameObject _PostProcessing;
 
 
@@ -138,6 +139,7 @@ public class S_SpawnCharacter : S_Vis_Base
 	private void SetPlayerValuesOnStart (GameObject Player) {
 		Player.GetComponentInChildren<S_PlayerScore>()._StageInfo = _StageInfo;
 		Player.GetComponentInChildren<S_PlayerCoreValues>()._Music = _MusicPlayer;
+		Player.GetComponentInChildren<S_PlayerCoreValues>()._MusicVersionHandler = _MusicVersionHandler;
 	}
 
 	private void CheckReplace () {
